@@ -1,24 +1,14 @@
-
-r.formatOnSave": true,
-  "editor.suggest.insertMode": "replace",
+{
+  "editor.formatOnSave": true,
   "terminal.integrated.fontFamily": "MesloLGS NF",
-  "editor.linkedEditing": true,
   "javascript.updateImportsOnFileMove.enabled": "always",
   "window.zoomLevel": 0.5,
   "launch": {},
   "[json]": {},
-  "workbench.statusBar.visible": false,
-  "editor.minimap.enabled": false,
-  "breadcrumbs.enabled": false,
-  "workbench.iconTheme": "material-icon-theme",
-  "update.showReleaseNotes": false,
-  "workbench.activityBar.visible": false,
-  "zenMode.hideLineNumbers": false,
-  "zenMode.hideTabs": false,
+
   "editor.lineNumbers": "relative",
 
   "vim.leader": "<Space>",
-  "vim.hlsearch": true,
   "vim.normalModeKeyBindingsNonRecursive": [
     // NAVIGATION
     // switch b/w buffers
@@ -42,41 +32,19 @@ r.formatOnSave": true,
       "before": ["leader", "k"],
       "commands": ["workbench.action.focusAboveGroup"]
     },
-    // FILE TREE
-    {
-      "before": ["leader", "n", "e"], 
-      "commands": ["workbench.explorer.fileView.focus"]
-    },
-    {
-        "key": "ctrl+n",
-        "command": "explorer.newFile",
-        "when": "explorerViewletFocus"
-    },
-    {
-        "key": "ctrl+shift+n",
-        "command": "explorer.newFolder",
-        "when": "explorerViewletFocus"
-    }, 
     {
       "before": ["leader", "l"],
       "commands": ["workbench.action.focusRightGroup"]
     },
+
+    // FILE TREE
+    {
+      "before": ["leader", "n", "e"],
+      "commands": ["workbench.explorer.fileView.focus"]
+    },
+
     // NICE TO HAVE
-    { "before": ["leader", "w"], "commands": [":w!"] },
-    { "before": ["leader", "q"], "commands": [":q!"] },
-    { "before": ["leader", "x"], "commands": [":x!"] },
-    {
-      "before": ["[", "d"],
-      "commands": ["editor.action.marker.prev"]
-    },
-    {
-      "before": ["]", "d"],
-      "commands": ["editor.action.marker.next"]
-    },
-    {
-      "before": ["<leader>", "c", "a"],
-      "commands": ["editor.action.quickFix"]
-    },
+    { "before": ["leader", "w"], "commands": ["workbench.action.files.save"] },
     { "before": ["leader", "f"], "commands": ["workbench.action.quickOpen"] },
     { "before": ["leader", "p"], "commands": ["editor.action.formatDocument"] },
     {
@@ -104,5 +72,8 @@ r.formatOnSave": true,
   "[jsonc]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "explorer.confirmDelete": false
+  "workbench.statusBar.visible": false,
+  "editor.minimap.enabled": false,
+  "breadcrumbs.enabled": false,
+  "workbench.activityBar.visible": false
 }
